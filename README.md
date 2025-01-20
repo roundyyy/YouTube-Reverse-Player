@@ -8,7 +8,7 @@
 > Learn exactly how to reassemble that gadget you just tore apart!"
 
 This script downloads a YouTube video, reverses it (in a two-step process), and then plays it back in a simple GUI.  
-You can quickly scrub through frames, play/pause, adjust playback speed, and jump frame-by-frame.
+You can quickly scrub through frames, play/pause, adjust playback speed, and jump frame-by-frame. The encoding process is optimized for speed rather than output video quality to provide quick results.
 
 ## Features
 
@@ -40,7 +40,7 @@ You can quickly scrub through frames, play/pause, adjust playback speed, and jum
 
 1. **Clone** this repository:
    ```bash
-   git clone https://github.com/<your-username>/<repo-name>.git
+   https://github.com/roundyyy/YouTube-Reverse-Player.git
    ```
    Or download the ZIP and extract it.
 
@@ -107,6 +107,7 @@ That's it! If everything is installed, you should see the tool's GUI window.
 - No audio is retained in the reversed output
 - High resolutions above 1024p are skipped by default (you can modify the code if you want higher resolutions)
 - VLC may occasionally have trouble with certain exotic codecs or unrecognized container formats. Try a different resolution if that happens
+- The FFmpeg encoding parameters are optimized for processing speed rather than output quality - if you need higher quality output, you may want to modify the encoding parameters in the `two_step_reverse_and_fps` function
 
 ## FAQ
 
@@ -114,7 +115,7 @@ That's it! If everything is installed, you should see the tool's GUI window.
 A: Typically, no. If you installed VLC with the default settings, python-vlc should find it automatically. If you installed VLC in a non-standard location, you may need to copy libvlc.dll and plugins/ into the same folder as this script or reinstall VLC to its default location.
 
 **Q: What if ffmpeg is not found?**  
-A: Install FFmpeg or copy its executable into the project folder. If on Windows, ensure ffmpeg.exe is in the same folder or in your PATH.
+A: Install FFmpeg or copy its executable into the project folder. If on Windows, ensure ffmpeg.exe is in the same folder or in your PATH. Tutorial : [tutorial](https://phoenixnap.com/kb/ffmpeg-windows)
 
 **Q: Can I keep the reversed .mp4 file permanently?**  
 A: Yes—check the box "Do not delete reversed video" in the app. Otherwise, it's deleted when you close the program.
